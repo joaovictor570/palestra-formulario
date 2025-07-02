@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #282929;
+  color: #0fb3c9;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  background: rgb(59, 59, 59);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-formulario {
+  width: 40%;
+  background: rgb(85, 84, 84);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #149ec9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #076df3;
+}
+
+/* Mensagem */
+#mensagem {
+  margin-top: 1rem;
+  color: #e53935;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Lista de inscritos */
+#lista-inscritos {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 colunas */
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* Card de participante */
+.card-participante {
+  background-color: #e3f2fd; /* pode ser sobrescrito via JS */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card-participante:hover {
+  transform: scale(1.02);
+}
+
+/* Nome */
+.card-participante .nome {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Setor */
+.card-participante .setor {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Imagem final */
+#imagem-final {
+  margin-top: 2rem;
+  max-width: 90%;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  input,
+  button {
+    font-size: 0.95rem;
+  }
+
+  .card-participante .nome {
+    font-size: 1.1rem;
+  }
+
+  .container-formulario {
+    width: 100%;
+  }
+
+  #lista-inscritos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
