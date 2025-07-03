@@ -103,9 +103,9 @@ button:hover {
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease;
-
-  width: 100%;
-  height: 100%;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
 }
 
 
