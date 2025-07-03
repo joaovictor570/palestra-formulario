@@ -79,13 +79,12 @@ button:hover {
 
 /* Lista de inscritos */
 #lista-inscritos {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 colunas */
-  gap: 1rem;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  padding: 1rem;
 }
 
 /* Card de participante */
@@ -155,3 +154,23 @@ button:hover {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+@media (max-width: 768px) {
+  #lista-inscritos {
+    justify-content: center;
+  }
+
+  .card-participante {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-participante .nome {
+    font-size: 0.95rem;
+  }
+
+  .card-participante .setor {
+    font-size: 0.8rem;
+  }
+}
+
