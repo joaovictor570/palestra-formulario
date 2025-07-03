@@ -52,6 +52,8 @@ if (form) {
         mensagem.textContent = "Inscrição realizada com sucesso!";
         mensagem.style.color = "cyan";
         form.nome.value = "";
+        form.telefone.value = "";
+        form.setor.value = "";
       } else {
         mensagem.textContent = result.erro || "Erro ao enviar inscrição.";
       }
