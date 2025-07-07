@@ -1,15 +1,4 @@
-// Função para gerar cor aleatória suave (opcional)
-function getRandomColor() {
-  const colors = [
-    "#e6f7ff",
-    "#f9f0ff",
-    "#fff7e6",
-    "#e6fffb",
-    "#f6ffed",
-    "#fff1f0",
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+
 
 // -----------------------------------------
 // FORMULÁRIO (index.html)
