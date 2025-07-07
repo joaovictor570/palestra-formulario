@@ -1,4 +1,4 @@
-/* Reset básico */
+ /* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,7 +30,6 @@ h1 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Container do formulário */
 .container-formulario {
   width: 40%;
   background: rgb(85, 84, 84);
@@ -78,32 +77,32 @@ button:hover {
   font-weight: bold;
 }
 
-/* Lista de inscritos - quebra-cabeça com 10 colunas e 5 linhas */
+/* Lista de inscritos */
 #lista-inscritos {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-auto-rows: 120px;
-  gap: 1rem;
-  width: 100%;
-  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
   padding: 1rem;
 }
 
-/* Card de participante com efeito de quebra-cabeça */
+/* Card de participante */
+
 .card-participante {
   background-color: #e3f2fd;
   padding: 0.5rem;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease;
-  width: 120px;
-  height: 120px;
+
+  width: 100%;
+  height: 100%;
 }
 
 .card-participante:hover {
@@ -115,6 +114,7 @@ button:hover {
   font-size: 1.1rem;
   font-weight: bold;
   color: #0077b6;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 
@@ -133,29 +133,10 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade */
-@media (max-width: 1200px) {
-  #lista-inscritos {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: 100px;
-  }
-
-  .card-participante .nome {
-    font-size: 0.95rem;
-  }
-
-  .card-participante .setor {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
+/* Responsividade extra */
+@media (max-width: 600px) {
   .container {
     padding: 1.5rem;
-    width: 100%;
-  }
-
-  .container-formulario {
     width: 100%;
   }
 
@@ -164,11 +145,34 @@ button:hover {
     font-size: 0.95rem;
   }
 
+  .card-participante .nome {
+    font-size: 1.1rem;
+  }
+
+  .container-formulario {
+    width: 100%;
+  }
+
   #lista-inscritos {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #lista-inscritos {
+    justify-content: center;
   }
 
   .card-participante {
-    height: 90px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-participante .nome {
+    font-size: 0.95rem;
+  }
+
+  .card-participante .setor {
+    font-size: 0.8rem;
   }
 }
