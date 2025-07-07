@@ -93,17 +93,17 @@ button:hover {
 /* Card de participante com efeito de quebra-cabeça */
 .card-participante {
   background-color: #e3f2fd;
-  color: #004d80;
-  font-weight: bold;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
   width: 120px;
   height: 120px;
-  padding: 0.5rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
 }
 
 .card-participante:hover {
