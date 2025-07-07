@@ -103,30 +103,9 @@ button:hover {
   transition: transform 0.2s ease;
   width: 120px;
   height: 120px;
-  mask-size: cover;
-  -webkit-mask-size: cover;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  transition: transform 0.3s ease;
+  
 }
 
-/* 🧩 Alternância das máscaras */
-.card-participante:nth-child(4n) {
-  mask-image: url("/mascaras/puzzle-top.svg");
-  -webkit-mask-image: url("/mascaras/puzzle-top.svg");
-}
-.card-participante:nth-child(4n-1) {
-  mask-image: url("/mascaras/puzzle-bottom.svg");
-  -webkit-mask-image: url("/mascaras/puzzle-bottom.svg");
-}
-.card-participante:nth-child(4n-2) {
-  mask-image: url("/mascaras/puzzle-left.svg");
-  -webkit-mask-image: url("/mascaras/puzzle-left.svg");
-}
-.card-participante:nth-child(4n-3) {
-  mask-image: url("/mascaras/puzzle-right.svg");
-  -webkit-mask-image: url("/mascaras/puzzle-right.svg");
-}
 
 .card-participante:hover {
   transform: scale(1.02);
