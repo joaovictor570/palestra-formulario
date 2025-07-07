@@ -103,21 +103,9 @@ button:hover {
   transition: transform 0.2s ease;
   width: 120px;
   height: 120px;
+  clip-path: path("M0,30 Q0,15 15,15 H85 Q100,15 100,0 V85 Q100,100 85,100 H15 Q0,100 0,85 Z");
 }
 
-/* 🧩 Bordas variadas para simular peças de quebra-cabeça */
-.card-participante:nth-child(4n) {
-  border-radius: 40% 0 40% 0;
-}
-.card-participante:nth-child(4n-1) {
-  border-radius: 0 40% 0 40%;
-}
-.card-participante:nth-child(5n) {
-  border-radius: 30% 30% 0 0;
-}
-.card-participante:nth-child(3n) {
-  border-radius: 0 0 30% 30%;
-}
 
 .card-participante:hover {
   transform: scale(1.02);
