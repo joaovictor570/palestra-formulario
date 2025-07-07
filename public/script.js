@@ -67,7 +67,6 @@ if (listaEl) {
         dados.forEach((pessoa) => {
           const card = document.createElement("div");
           card.className = "card-participante";
-          card.style.backgroundColor = getRandomColor();
           card.innerHTML = `
             <span class="nome">${pessoa.nome}</span>
             <span class="setor">${pessoa.setor}</span>
