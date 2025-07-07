@@ -104,8 +104,8 @@ button:hover {
   text-align: center;
   transition: transform 0.2s ease;
 
-  width: 115px;
-  height: 115px;
+  width: 120px;
+  height: 120px;
 }
 
 .card-participante:hover {
