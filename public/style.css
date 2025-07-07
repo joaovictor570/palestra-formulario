@@ -103,9 +103,7 @@ button:hover {
   transition: transform 0.2s ease;
   width: 120px;
   height: 120px;
-  
 }
-
 
 .card-participante:hover {
   transform: scale(1.02);
