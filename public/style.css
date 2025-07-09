@@ -93,28 +93,55 @@ button:hover {
 
 /* Card de participante - peça do quebra-cabeça */
 .card-participante {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
+  background-color: #dbeeff; /* cor de fundo (pode ser aleatória via JS) */
+  color: #000;
   font-weight: bold;
+  font-size: 0.85rem;
+
+  /* Máscara estilo quebra-cabeça */
+  -webkit-mask-image: url("svg/peca-puzzle.svg");
+  mask-image: url("svg/peca-puzzle.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  padding: 0.2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card-participante:hover {
+  transform: scale(1.04);
+  z-index: 2;
 }
 
 /* Nome */
 .card-participante .nome {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  color: #004080;
+  text-shadow: 0 0 3px #ffffff;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 /* Setor */
 .card-participante .setor {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  color: #333;
+  font-weight: normal;
+  text-shadow: 0 0 2px #ffffff;
 }
 
 /* Imagem final */
