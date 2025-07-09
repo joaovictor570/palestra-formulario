@@ -1,3 +1,4 @@
+// -----------------------------------------
 // FORMULÁRIO (index.html)
 
 const form = document.getElementById("form-inscricao");
