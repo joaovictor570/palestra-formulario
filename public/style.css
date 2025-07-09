@@ -84,16 +84,11 @@ button:hover {
 
 /* Lista de inscritos em grid fixo 10x5 */
 #lista-inscritos {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
+  position: relative;
+  width: 1000px; /* 10 colunas x 100px cada */
+  height: 500px; /* 5 linhas x 100px cada */
+  margin: 0 auto;
+  overflow: hidden; /* impede que peças vazem fora */
 }
 
 /* Card de participante - peça do quebra-cabeça */
