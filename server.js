@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 const Inscricao = require("./models/Inscricao");
-
 const app = express();
 
 // Middlewares

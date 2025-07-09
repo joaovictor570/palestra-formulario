@@ -1,15 +1,4 @@
 // Função para gerar cor aleatória suave (opcional)
-function getRandomColor() {
-  const colors = [
-    "#e6f7ff",
-    "#f9f0ff",
-    "#fff7e6",
-    "#e6fffb",
-    "#f6ffed",
-    "#fff1f0",
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
 
 // -----------------------------------------
 // FORMULÁRIO (index.html)
@@ -52,6 +41,8 @@ if (form) {
         mensagem.textContent = "Inscrição realizada com sucesso!";
         mensagem.style.color = "cyan";
         form.nome.value = "";
+        form.telefone.value = "";
+        form.setor.value = "";
       } else {
         mensagem.textContent = result.erro || "Erro ao enviar inscrição.";
       }
@@ -76,7 +67,6 @@ if (listaEl) {
         dados.forEach((pessoa) => {
           const card = document.createElement("div");
           card.className = "card-participante";
-          card.style.backgroundColor = getRandomColor();
           card.innerHTML = `
             <span class="nome">${pessoa.nome}</span>
             <span class="setor">${pessoa.setor}</span>
