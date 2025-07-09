@@ -1,8 +1,4 @@
-// Função para gerar cor aleatória suave (opcional)
-
-// -----------------------------------------
 // FORMULÁRIO (index.html)
-// -----------------------------------------
 
 const form = document.getElementById("form-inscricao");
 const mensagem = document.getElementById("mensagem");
