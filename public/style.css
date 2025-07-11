@@ -103,7 +103,7 @@ button:hover {
   align-items: center;
   text-align: center;
 
-  background-color: #dbeeff; /* cor de fundo (pode ser aleatória via JS) */
+  background-color: transparent; /* cor de fundo (pode ser aleatória via JS) */
   color: #000;
   font-weight: bold;
   font-size: 0.85rem;
