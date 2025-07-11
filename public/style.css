@@ -37,6 +37,7 @@ h1 {
   width: 40%;
   background: rgb(85, 84, 84);
   padding: 2rem;
+  margin: auto;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -153,6 +154,11 @@ button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-formulario {
     width: 100%;
     height: auto;
   }
