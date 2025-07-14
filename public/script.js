@@ -76,24 +76,16 @@ if (listaEl) {
           const card = document.createElement("div");
           card.className = "card-participante";
           card.innerHTML = `
-    <span class="nome">${pessoa.nome}</span>
-    <span class="setor">${pessoa.setor}</span>
-  `;
+      <span class="nome">${pessoa.nome}</span>
+      <span class="setor">${pessoa.setor}</span>
+    `;
 
-          // Posicionamento e máscara SVG
+          // Posicionamento manual via estilo
           card.style.position = "absolute";
           card.style.left = `${left}px`;
           card.style.top = `${top}px`;
           card.style.width = `${largura}px`;
           card.style.height = `${altura}px`;
-
-          // Aplica a máscara SVG correspondente à peça
-          card.style.maskImage = `url('svg/peca-${index + 1}.svg')`;
-          card.style.webkitMaskImage = `url('svg/peca-${index + 1}.svg')`;
-          card.style.maskSize = "cover";
-          card.style.webkitMaskSize = "cover";
-          card.style.maskRepeat = "no-repeat";
-          card.style.webkitMaskRepeat = "no-repeat";
 
           listaEl.appendChild(card);
         });
