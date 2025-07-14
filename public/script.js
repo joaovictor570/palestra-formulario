@@ -124,6 +124,6 @@ if (listaEl) {
     });
   }
 
-  //carregarLista(); // chama ao abrir
+  carregarLista(); // chama ao abrir
   //setInterval(carregarLista, 5000); // atualiza a cada 5s
 }
