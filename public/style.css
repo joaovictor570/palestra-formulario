@@ -117,19 +117,6 @@ button:hover {
   color: #000;
   font-weight: bold;
   font-size: 0.85rem;
-
-  /* Máscara estilo quebra-cabeça */
-  -webkit-mask-image: url("svg/peca-puzzle.svg");
-  mask-image: url("svg/peca-puzzle.svg");
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-
-  padding: 0.2rem;
-  box-sizing: border-box;
-  overflow: hidden;
-  transition: transform 0.2s ease;
 }
 
 .card-participante:hover {
