@@ -11,6 +11,7 @@ body {
   background-color: #282929;
   color: #0fb3c9;
   padding: 2rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -26,7 +27,7 @@ h1 {
   padding: 2rem;
   border-radius: 12px;
   height: 530px;
-  width: 1025px;
+  width: 1045px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
   position: relative;
@@ -70,6 +71,18 @@ button {
 
 button:hover {
   background-color: #076df3;
+}
+
+#btn-sorteio {
+  padding: 12px;
+  margin: 1rem;
+  font-size: 1rem;
+  background-color: #149ec9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 /* Mensagem */
