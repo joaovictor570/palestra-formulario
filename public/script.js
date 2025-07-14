@@ -97,6 +97,33 @@ if (listaEl) {
       });
   }
 
+  const btnSorteio = document.getElementById("btn-sorteio");
+  const resultadoEl = document.getElementById("resultado-sorteio");
+
+  if (btnSorteio) {
+    btnSorteio.addEventListener("click", async () => {
+      try {
+        const res = await fetch("/sorteio");
+        const data = await res.json();
+
+        if (res.ok) {
+          if (data.pessoa) {
+            resultadoEl.innerHTML = `
+            <h2>Número sorteado: ${data.numero}</h2>
+            <p><strong>${data.pessoa.nome}</strong> — ${data.pessoa.setor}</p>
+          `;
+          } else {
+            resultadoEl.innerHTML = `<h2>Número ${data.numero} ainda sem dono.</h2>`;
+          }
+        } else {
+          resultadoEl.textContent = data.erro || "Erro no sorteio.";
+        }
+      } catch (e) {
+        resultadoEl.textContent = "Falha ao conectar ao servidor.";
+      }
+    });
+  }
+
   carregarLista(); // chama ao abrir
   setInterval(carregarLista, 5000); // atualiza a cada 5s
 }

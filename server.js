@@ -85,6 +85,46 @@ app.get("/contagem", async (req, res) => {
   }
 });
 
+let numerosSorteados = new Set();
+
+// GET /sorteio  → devolve { numero, pessoa }
+app.get("/sorteio", async (req, res) => {
+  try {
+    // 1. Pega todos os inscritos (com número)
+    const inscritos = await Inscricao.find(
+      {},
+      { _id: 0, nome: 1, setor: 1, numero: 1 }
+    );
+
+    if (numerosSorteados.size >= inscritos.length) {
+      return res
+        .status(400)
+        .json({ erro: "Todos os números já foram sorteados!" });
+    }
+
+    // 2. Escolhe um número aleatório NÃO sorteado ainda
+    let sorteado;
+    do {
+      sorteado = Math.floor(Math.random() * 50) + 1; // 1‑50
+    } while (numerosSorteados.has(sorteado));
+
+    // 3. Marca como já sorteado
+    numerosSorteados.add(sorteado);
+
+    // 4. Encontra a pessoa
+    const pessoa = inscritos.find((p) => p.numero === sorteado);
+
+    if (!pessoa) {
+      // Caso raro: número ainda não atribuído
+      return res.json({ numero: sorteado, pessoa: null });
+    }
+
+    res.json({ numero: sorteado, pessoa });
+  } catch (err) {
+    res.status(500).json({ erro: "Erro no sorteio" });
+  }
+});
+
 // Inicia o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
