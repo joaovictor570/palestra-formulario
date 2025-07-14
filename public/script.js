@@ -60,14 +60,33 @@ if (listaEl) {
     fetch("/inscritos")
       .then((res) => res.json())
       .then((dados) => {
-        listaEl.innerHTML = ""; // limpa antes de recriar
-        dados.forEach((pessoa) => {
+        listaEl.innerHTML = "";
+
+        const colunas = 10;
+        const linhas = 5;
+        const largura = 100; // pixels
+        const altura = 100;
+
+        dados.forEach((pessoa, index) => {
+          const col = index % colunas;
+          const row = Math.floor(index / colunas);
+          const left = col * largura;
+          const top = row * altura;
+
           const card = document.createElement("div");
           card.className = "card-participante";
           card.innerHTML = `
-            <span class="nome">${pessoa.nome}</span>
-            <span class="setor">${pessoa.setor}</span>
-          `;
+      <span class="nome">${pessoa.nome}</span>
+      <span class="setor">${pessoa.setor}</span>
+    `;
+
+          // Posicionamento manual via estilo
+          card.style.position = "absolute";
+          card.style.left = `${left}px`;
+          card.style.top = `${top}px`;
+          card.style.width = `${largura}px`;
+          card.style.height = `${altura}px`;
+
           listaEl.appendChild(card);
         });
 
@@ -75,9 +94,6 @@ if (listaEl) {
           const imagem = document.getElementById("imagem-final");
           if (imagem) imagem.style.display = "block";
         }
-      })
-      .catch(() => {
-        listaEl.innerHTML = "<p>Erro ao carregar inscritos.</p>";
       });
   }
 
