@@ -25,10 +25,10 @@ h1 {
 .container {
   padding: 2rem;
   border-radius: 12px;
-  height: 710px;
+  height: 530px;
+  width: 1025px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
-  background-size: cover;
   position: relative;
 }
 
