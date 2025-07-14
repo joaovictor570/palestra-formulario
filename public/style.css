@@ -95,8 +95,8 @@ button:hover {
 /* Lista de inscritos em grid fixo 10x5 */
 #lista-inscritos {
   position: relative;
-  width: 1000px; /* 10 colunas x 100px cada */
-  height: 500px; /* 5 linhas x 100px cada */
+  width: 1100px; /* 10 colunas x 100px cada */
+  height: 550px; /* 5 linhas x 100px cada */
   margin: 0 auto;
   overflow: hidden; /* impede que peças vazem fora */
 }
@@ -113,10 +113,19 @@ button:hover {
   align-items: center;
   text-align: center;
 
-  background-color: transparent;
-  color: #000;
+  background-color: transparent; /* ou use rgba para visualizar */
+  color: #003366;
   font-weight: bold;
   font-size: 0.85rem;
+
+  padding: 0.2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+  /* REMOVER máscara */
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .card-participante:hover {

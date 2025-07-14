@@ -1,6 +1,5 @@
 // -----------------------------------------
 // FORMULÁRIO (index.html)
-
 const form = document.getElementById("form-inscricao");
 const mensagem = document.getElementById("mensagem");
 
@@ -12,13 +11,11 @@ if (form) {
     const telefone = form.telefone.value.trim();
     const setor = form.setor.value.trim();
 
-    // Validação básica
     if (!nome || !telefone || !setor) {
       mensagem.textContent = "Preencha todos os campos.";
       return;
     }
 
-    // Validação de telefone (padrão brasileiro simples)
     const telefoneValido = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(telefone);
     if (!telefoneValido) {
       mensagem.textContent = "Digite um telefone válido (ex: 11912345678).";
@@ -31,19 +28,16 @@ if (form) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, telefone, setor }),
       });
-
       const result = await response.json();
 
       if (response.ok) {
         mensagem.textContent = "Inscrição realizada com sucesso!";
         mensagem.style.color = "cyan";
-        form.nome.value = "";
-        form.telefone.value = "";
-        form.setor.value = "";
+        form.reset();
       } else {
         mensagem.textContent = result.erro || "Erro ao enviar inscrição.";
       }
-    } catch (error) {
+    } catch {
       mensagem.textContent = "Erro ao conectar com o servidor.";
     }
   });
@@ -52,51 +46,46 @@ if (form) {
 // -----------------------------------------
 // LISTA DE INSCRITOS (lista.html)
 // -----------------------------------------
-
 const listaEl = document.getElementById("lista-inscritos");
 
+function posicionarCardsComoGrid() {
+  const cards = listaEl.querySelectorAll(".card-participante");
+  cards.forEach((card, i) => {
+    const col = i % 10; // 0‑9
+    const row = Math.floor(i / 10); // 0‑4
+    const tam = 110; // ⬅ ajuste ao mesmo valor do CSS
+    card.style.left = `${col * tam}px`;
+    card.style.top = `${row * tam}px`;
+    card.style.width = `${tam}px`;
+    card.style.height = `${tam}px`;
+  });
+}
+
 if (listaEl) {
-  function carregarLista() {
-    fetch("/inscritos")
-      .then((res) => res.json())
-      .then((dados) => {
-        listaEl.innerHTML = "";
+  async function carregarLista() {
+    const res = await fetch("/inscritos");
+    const dados = await res.json();
 
-        const colunas = 10;
-        const linhas = 5;
-        const largura = 100; // pixels
-        const altura = 100;
+    listaEl.innerHTML = "";
+    dados.forEach((pessoa) => {
+      const card = document.createElement("div");
+      card.className = "card-participante";
+      card.innerHTML = `
+        <span class="nome">${pessoa.nome}</span>
+        <span class="setor">${pessoa.setor}</span>
+      `;
+      listaEl.appendChild(card);
+    });
 
-        dados.forEach((pessoa, index) => {
-          const col = index % colunas;
-          const row = Math.floor(index / colunas);
-          const left = col * largura;
-          const top = row * altura;
+    posicionarCardsComoGrid();
 
-          const card = document.createElement("div");
-          card.className = "card-participante";
-          card.innerHTML = `
-      <span class="nome">${pessoa.nome}</span>
-      <span class="setor">${pessoa.setor}</span>
-    `;
-
-          // Posicionamento manual via estilo
-          card.style.position = "absolute";
-          card.style.left = `${left}px`;
-          card.style.top = `${top}px`;
-          card.style.width = `${largura}px`;
-          card.style.height = `${altura}px`;
-
-          listaEl.appendChild(card);
-        });
-
-        if (dados.length >= 50) {
-          const imagem = document.getElementById("imagem-final");
-          if (imagem) imagem.style.display = "block";
-        }
-      });
+    if (dados.length >= 50) {
+      const img = document.getElementById("imagem-final");
+      if (img) img.style.display = "block";
+    }
   }
 
+  // ---------- Botão de sorteio ----------
   const btnSorteio = document.getElementById("btn-sorteio");
   const resultadoEl = document.getElementById("resultado-sorteio");
 
@@ -109,21 +98,21 @@ if (listaEl) {
         if (res.ok) {
           if (data.pessoa) {
             resultadoEl.innerHTML = `
-            <h2>Número sorteado: ${data.numero}</h2>
-            <p><strong>${data.pessoa.nome}</strong> — ${data.pessoa.setor}</p>
-          `;
+              <h2>Número sorteado: ${data.numero}</h2>
+              <p><strong>${data.pessoa.nome}</strong> — ${data.pessoa.setor}</p>
+            `;
           } else {
             resultadoEl.innerHTML = `<h2>Número ${data.numero} ainda sem dono.</h2>`;
           }
         } else {
           resultadoEl.textContent = data.erro || "Erro no sorteio.";
         }
-      } catch (e) {
+      } catch {
         resultadoEl.textContent = "Falha ao conectar ao servidor.";
       }
     });
   }
 
-  carregarLista(); // chama ao abrir
-  //setInterval(carregarLista, 5000); // atualiza a cada 5s
+  carregarLista(); // carrega ao abrir
+  // setInterval(carregarLista, 5000);   // recarrega se quiser
 }
