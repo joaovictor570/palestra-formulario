@@ -24,6 +24,9 @@ h1 {
 /* Container principal com fundo de peças */
 .container {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
@@ -95,8 +98,12 @@ button:hover {
 /* Lista de inscritos em grid fixo 10x5 */
 #lista-inscritos {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 colunas */
-  grid-template-rows: repeat(5, 1fr); /* 5 linhas */
+  grid-template-columns: repeat(10, 120px); /* 10 colunas fixas */
+  grid-template-rows: repeat(5, 120px); /* 5 linhas fixas */
+  gap: 0; /* Se quiser espaço entre as peças, defina um valor como gap: 2px */
+  width: 1200px;
+  height: 600px;
+  position: relative;
 }
 
 /* Card de participante - peça do quebra-cabeça */
