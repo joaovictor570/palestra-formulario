@@ -160,6 +160,12 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+#resultado-sorteio {
+  margin: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
