@@ -29,8 +29,9 @@ h1 {
   height: 530px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-position: center;
 }
 
 /* Formulário */
@@ -98,10 +99,6 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(10, 1fr); /* 10 colunas */
   grid-template-rows: repeat(5, 1fr); /* 5 linhas */
-  background-image: url("/img/OIP2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 /* Card de participante - peça do quebra-cabeça */
