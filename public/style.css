@@ -98,9 +98,8 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(10, 1fr); /* 10 colunas */
   grid-template-rows: repeat(5, 1fr); /* 5 linhas */
-  width: 1000px;
-  height: 500px;
   background-image: url("/img/tabuleiro.png");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
