@@ -98,13 +98,11 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(10, 1fr); /* 10 colunas */
   grid-template-rows: repeat(5, 1fr); /* 5 linhas */
-  width: 1100px; /* 10 colunas × 110px */
-  height: 550px; /* 5 linhas × 110px */
-  gap: 0; /* sem espaçamento entre peças */
-  position: relative;
-  background-image: url("/img/OIP2.jpg"); /* fundo com tabuleiro de peças, se quiser */
+  width: 1000px;
+  height: 500px;
+  background-image: url("/img/tabuleiro.png");
   background-size: cover;
-  overflow: hidden;
+  background-position: center;
 }
 
 /* Card de participante - peça do quebra-cabeça */
@@ -115,14 +113,10 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background: transparent; /* ou branco/cinza */
-  font-size: 0.85rem;
   font-weight: bold;
-  color: #004080;
+  font-size: 0.9rem;
   text-align: center;
-  padding: 0.5rem;
-  overflow: hidden;
+  padding: 0.3rem;
 }
 
 .card-participante:hover {
