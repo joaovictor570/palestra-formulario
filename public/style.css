@@ -95,39 +95,34 @@ button:hover {
 
 /* Lista de inscritos em grid fixo 10x5 */
 #lista-inscritos {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 colunas */
+  grid-template-rows: repeat(5, 1fr); /* 5 linhas */
+  width: 1100px; /* 10 colunas × 110px */
+  height: 550px; /* 5 linhas × 110px */
+  gap: 0; /* sem espaçamento entre peças */
   position: relative;
-  width: 1000px; /* 10 colunas x 100px cada */
-  height: 500px; /* 5 linhas x 100px cada */
-  margin: 0 auto;
-  overflow: hidden; /* impede que peças vazem fora */
+  background-image: url("/img/OIP2.jpg"); /* fundo com tabuleiro de peças, se quiser */
+  background-size: cover;
+  overflow: hidden;
 }
 
 /* Card de participante - peça do quebra-cabeça */
 .card-participante {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-
+  width: 110px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 0.5rem;
 
-  background-color: transparent; /* ou use rgba para visualizar */
-  color: #003366;
-  font-weight: bold;
+  background: transparent; /* ou branco/cinza */
   font-size: 0.85rem;
-
-  padding: 0.2rem;
-  box-sizing: border-box;
+  font-weight: bold;
+  color: #004080;
+  text-align: center;
+  padding: 0.5rem;
   overflow: hidden;
-  transition: transform 0.2s ease;
-
-  /* REMOVER máscara */
-  -webkit-mask-image: none;
-  mask-image: none;
 }
 
 .card-participante:hover {
