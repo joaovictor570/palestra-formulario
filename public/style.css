@@ -23,9 +23,10 @@ h1 {
 
 /* Container principal com fundo de peças */
 .container {
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 12px;
-  width: 1100px;
+  width: 1020px;
+  height: 530px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
   background-size: cover;
@@ -95,8 +96,8 @@ button:hover {
 /* Lista de inscritos em grid fixo 10x5 */
 #lista-inscritos {
   position: relative;
-  width: 1100px; /* 10 colunas x 100px cada */
-  height: 550px; /* 5 linhas x 100px cada */
+  width: 1000px; /* 10 colunas x 100px cada */
+  height: 500px; /* 5 linhas x 100px cada */
   margin: 0 auto;
   overflow: hidden; /* impede que peças vazem fora */
 }
@@ -112,6 +113,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 
   background-color: transparent; /* ou use rgba para visualizar */
   color: #003366;

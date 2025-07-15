@@ -48,19 +48,6 @@ if (form) {
 // -----------------------------------------
 const listaEl = document.getElementById("lista-inscritos");
 
-function posicionarCardsComoGrid() {
-  const cards = listaEl.querySelectorAll(".card-participante");
-  cards.forEach((card, i) => {
-    const col = i % 10; // 0‑9
-    const row = Math.floor(i / 10); // 0‑4
-    const tam = 110; // ⬅ ajuste ao mesmo valor do CSS
-    card.style.left = `${col * tam}px`;
-    card.style.top = `${row * tam}px`;
-    card.style.width = `${tam}px`;
-    card.style.height = `${tam}px`;
-  });
-}
-
 if (listaEl) {
   async function carregarLista() {
     const res = await fetch("/inscritos");
