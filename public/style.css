@@ -118,6 +118,8 @@ button:hover {
   font-size: 0.9rem;
   text-align: center;
   padding: 0.3rem;
+  overflow: hidden;
+  line-height: 1.1;
 }
 
 .card-participante:hover {
@@ -132,6 +134,10 @@ button:hover {
   text-shadow: 0 0 3px #ffffff;
   text-transform: uppercase;
   line-height: 1.2;
+  display: block;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 /* Setor */
@@ -140,6 +146,10 @@ button:hover {
   color: #333;
   font-weight: normal;
   text-shadow: 0 0 2px #ffffff;
+  display: block;
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 /* Imagem final */
