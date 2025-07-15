@@ -59,6 +59,7 @@ if (listaEl) {
       card.className = "card-participante";
       card.innerHTML = `
         <span class="nome">${pessoa.nome}</span>
+        <br>
         <span class="setor">${pessoa.setor}</span>
       `;
       listaEl.appendChild(card);
