@@ -64,8 +64,6 @@ if (listaEl) {
       listaEl.appendChild(card);
     });
 
-    posicionarCardsComoGrid();
-
     if (dados.length >= 50) {
       const img = document.getElementById("imagem-final");
       if (img) img.style.display = "block";
