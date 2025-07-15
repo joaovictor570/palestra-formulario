@@ -23,10 +23,8 @@ h1 {
 
 /* Container principal com fundo de peças */
 .container {
-  padding: 0.5rem;
+  padding: 2rem;
   border-radius: 12px;
-  width: 1020px;
-  height: 530px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-image: url("/img/OIP2.jpg");
   background-repeat: no-repeat;
