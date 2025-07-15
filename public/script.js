@@ -100,4 +100,13 @@ if (listaEl) {
 
   carregarLista(); // carrega ao abrir
   // setInterval(carregarLista, 5000);   // recarrega se quiser
+
+  const btnRevelar = document.getElementById("btn-revelar");
+  const imagemFinal = document.getElementById("imagem-final");
+
+  if (btnRevelar && imagemFinal) {
+    btnRevelar.addEventListener("click", () => {
+      imagemFinal.style.display = "block";
+    });
+  }
 }
