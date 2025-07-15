@@ -98,7 +98,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(10, 1fr); /* 10 colunas */
   grid-template-rows: repeat(5, 1fr); /* 5 linhas */
-  background-image: url("/img/tabuleiro.png");
+  background-image: url("/img/OIP2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
