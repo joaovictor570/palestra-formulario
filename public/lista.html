@@ -8,23 +8,17 @@
   </head>
   <body>
     <h1>Participantes Inscritos</h1>
-    <div class="container">
-      <!-- Grade de participantes -->
-      <div id="lista-inscritos" class="grade"></div>
+    div class="container">
+  <div id="lista-inscritos" class="grade"></div>
 
-      <!-- Imagem oculta (caso precise revelar ao chegar 50 pessoas) -->
-      <img
-        id="imagem-final"
-        src="img/surpresa.png"
-        alt="Imagem Revelada"
-        style="
-          display: none;
-          margin-top: 2rem;
-          max-width: 100%;
-          border-radius: 12px;
-        "
-      />
-    </div>
+  <!-- Imagem que cobre a lista -->
+  <div id="cobertura">
+    <img src="img/surpresa.png" alt="Imagem Revelada" />
+  </div>
+</div>
+
+<!-- Botão para exibir/ocultar -->
+<button id="btn-revelar">Revelar Imagem</button>
 
     <button id="btn-sorteio">Sortear Número</button>
     <div id="resultado-sorteio"></div>

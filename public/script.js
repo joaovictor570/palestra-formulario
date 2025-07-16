@@ -100,5 +100,14 @@ if (listaEl) {
   }
 
   carregarLista(); // carrega ao abrir
-  // setInterval(carregarLista, 5000);   // recarrega se quiser
+  setInterval(carregarLista, 5000); // recarrega se quiser
+}
+
+const btnRevelar = document.getElementById("btn-revelar");
+const cobertura = document.getElementById("cobertura");
+
+if (btnRevelar && cobertura) {
+  btnRevelar.addEventListener("click", () => {
+    cobertura.style.display = "flex";
+  });
 }
