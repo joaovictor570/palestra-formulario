@@ -26,6 +26,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -109,7 +110,7 @@ button:hover {
   display: flex;
   background-color: #ccc;
   border-radius: 12px;
-  border: 1px solid black;
+  box-shadow: 5px rgba(0, 0, 0, 0.4);
   flex-direction: column;
   justify-content: center;
   align-items: center;
