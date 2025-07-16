@@ -28,10 +28,7 @@ h1 {
   align-items: center;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background-image: url("/img/OIP2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: white;
 }
 
 /* Formulário */
@@ -107,9 +104,12 @@ button:hover {
 
 /* Card de participante - peça do quebra-cabeça */
 .card-participante {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   display: flex;
+  background-color: #ccc;
+  border-radius: 12px;
+  border: 1px solid black;
   flex-direction: column;
   justify-content: center;
   align-items: center;
