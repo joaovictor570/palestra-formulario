@@ -204,14 +204,14 @@ button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin-top: 5rem;
   }
 
   .container-formulario {
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin-top: 5rem;
   }
 
   #lista-inscritos {
