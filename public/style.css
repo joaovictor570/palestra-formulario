@@ -198,6 +198,26 @@ button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+#btn-fechar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 11;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#btn-fechar:hover {
+  background-color: #e60000;
+}
+
 #resultado-sorteio {
   margin: 1rem;
   text-align: center;
