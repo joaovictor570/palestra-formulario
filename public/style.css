@@ -204,8 +204,9 @@ button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .container {
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin-top: 5rem;
   }
 
   .container-formulario {
