@@ -39,7 +39,7 @@ h1 {
   width: 40%;
   background: rgb(85, 84, 84);
   padding: 2rem;
-  margin: 2rem;
+  margin: 5rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -169,9 +169,15 @@ button:hover {
 /* Imagem final */
 #imagem-final {
   margin-top: 2rem;
+  max-width: 90%;
   display: none;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.finalImage {
+  width: 1264px;
+  height: 664px;
 }
 
 #cobertura {
@@ -188,8 +194,8 @@ button:hover {
 }
 
 #cobertura img {
-  max-width: 1264px;
-  max-height: 664px;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
