@@ -169,8 +169,6 @@ button:hover {
 /* Imagem final */
 #imagem-final {
   margin-top: 2rem;
-  width: 1264px;
-  height: 664px;
   display: none;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -190,8 +188,8 @@ button:hover {
 }
 
 #cobertura img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 1264px;
+  max-height: 664px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
