@@ -198,7 +198,7 @@ button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-#btn-fechar {
+#btnFechar {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -214,7 +214,7 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#btn-fechar:hover {
+#btnFechar:hover {
   background-color: #e60000;
 }
 

@@ -112,11 +112,11 @@ if (btnRevelar && cobertura) {
   });
 }
 
-const btnFechar = document.getElementById("btn-fechar");
+const btnFechar = document.getElementById("btnFechar");
 
 if (btnFechar && cobertura) {
   btnFechar.addEventListener("click", () => {
     cobertura.style.display = "none";
-    btnfechar.style.display = "none";
+    btnFechar.style.display = "none";
   });
 }
