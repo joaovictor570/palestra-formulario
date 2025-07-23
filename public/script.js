@@ -117,5 +117,6 @@ const btnFechar = document.getElementById("btn-fechar");
 if (btnFechar && cobertura) {
   btnFechar.addEventListener("click", () => {
     cobertura.style.display = "none";
+    btnfechar.style.display = "none";
   });
 }
