@@ -71,6 +71,22 @@ if (listaEl) {
     }
   }
 
+  // Lista de perguntas do quiz
+  const perguntas = [
+    "1. Qual é o maior planeta do sistema solar?",
+    "2. Quem pintou a obra ‘Mona Lisa’?",
+    "3. Em que ano o Brasil foi descoberto pelos portugueses?",
+    "4. Qual é o elemento químico representado pelo símbolo ‘O’?",
+    "5. Quantos lados tem um hexágono?",
+    "6. Qual é a capital da França?",
+    "7. Quem escreveu ‘Dom Casmurro’?",
+    "8. Qual é o rio mais extenso do mundo?",
+    "9. Quem foi o primeiro homem a pisar na Lua?",
+    "10. O que é H2O?",
+  ];
+
+  let perguntasUsadas = 0;
+
   // ---------- Botão de sorteio ----------
   const btnSorteio = document.getElementById("btn-sorteio");
   const resultadoEl = document.getElementById("resultado-sorteio");
@@ -83,10 +99,20 @@ if (listaEl) {
 
         if (res.ok) {
           if (data.pessoa) {
+            let perguntaTexto = "";
+
+            if (perguntasUsadas < perguntas.length) {
+              perguntaTexto = `<p><strong>Pergunta:</strong> ${perguntas[perguntasUsadas]}</p>`;
+              perguntasUsadas++;
+            } else {
+              perguntaTexto = `<p><strong>⚠ Todas as perguntas já foram feitas!</strong></p>`;
+            }
+
             resultadoEl.innerHTML = `
-              <h2>Número sorteado: ${data.numero}</h2>
-              <p><strong>${data.pessoa.nome}</strong> — ${data.pessoa.setor}</p>
-            `;
+            <h2>Número sorteado: ${data.numero}</h2>
+            <p><strong>${data.pessoa.nome}</strong> — ${data.pessoa.setor}</p>
+            ${perguntaTexto}
+          `;
           } else {
             resultadoEl.innerHTML = `<h2>Número ${data.numero} ainda sem dono.</h2>`;
           }
