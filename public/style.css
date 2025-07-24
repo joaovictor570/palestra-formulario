@@ -10,6 +10,8 @@ body {
   font-family: "Segoe UI", sans-serif;
   background-color: #282929;
   color: #0fb3c9;
+  font-size: 1.1rem;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
